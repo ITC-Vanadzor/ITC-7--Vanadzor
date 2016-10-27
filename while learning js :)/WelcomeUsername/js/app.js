@@ -1,8 +1,5 @@
 function showGreetingMessage() {
-   // window.location = 'about:blank';
-   // var name = document.getElementById('uname').value;
-  //  document.write("Welcome " + name);
-    document.getElementById('form').style.display = 'none';
-
-
+   var name = document.getElementById('uname').value;
+   name = $.trim(name);
+   document.write("Welcome" + name);
 }
