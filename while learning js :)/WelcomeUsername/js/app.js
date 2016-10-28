@@ -6,9 +6,11 @@ function showGreetingMessage() {
             password: "required"
         },
         messages: {
-            uname: "Please specify username",
-            psw: "Please specify your password"
-}
+            username: "Please specify username",
+            password: "Please specify your password"
+
+        },
+        errorElement: 'div'
 });
 
     if ($("#myform").valid()) {
@@ -23,6 +25,5 @@ function showGreetingMessage() {
     paragraph.appendChild(node);
     var element = document.getElementById("container");
     element.appendChild(paragraph);
-
 }
 }

@@ -30,3 +30,8 @@ button {
     text-align: center;
     margin: 24px 0 12px 0;
 }
+
+/* Error message style */
+div.error {
+   color: red;
+}
