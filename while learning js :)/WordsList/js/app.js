@@ -3,7 +3,7 @@ var uniqueWords = [];
 i=0;
 function addWord() {
     var newWord = document.getElementById('newWord').value;
-    words.push(newWord);
+    words.push(newWord.toLowerCase());
     var ul = document.getElementById("list");
     var li = document.createElement("li");
     li.appendChild(document.createTextNode(newWord));
@@ -21,6 +21,7 @@ function removeWord() {
 }
 
 function updateUniqueWordsList(word) {
+
     $.each(words, function(i, word){
         if($.inArray(word, uniqueWords) === -1) uniqueWords.push(word);
     })
