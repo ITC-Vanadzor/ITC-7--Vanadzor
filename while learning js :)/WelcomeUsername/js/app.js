@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    $("#myForm").validate({
+    $('#myForm').validate({
         rules: {
             username: 'required',
             password: 'required'
@@ -13,10 +13,10 @@ $( document ).ready(function() {
 });
 
 function showGreetingMessage() {
-    if ($("#myForm").valid()) {
+    if ($('#myForm').valid()) {
     var username = $.trim($('#uName').val());
-    $(".hidden-element").hide();
-        var greetingText = $("#greetingText");
+    $('.hidden-element').hide();
+        var greetingText = $('#greetingText');
         $(greetingText).html( 'Welcome ' + username);
         $(greetingText).css('display', 'block');
     }
