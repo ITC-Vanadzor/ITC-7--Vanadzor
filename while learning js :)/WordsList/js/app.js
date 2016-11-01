@@ -1,6 +1,6 @@
 var words = [];
-var uniqueWords = [];
-listItemId=0;
+var listItemId;
+listItemId = 0;
 
 function addWord() {
     var newWord = $('#newWord').val();
@@ -8,36 +8,32 @@ function addWord() {
     var ul = document.getElementById('list');
     var li = document.createElement("LI");
     li.appendChild(document.createTextNode(newWord));
-    li.setAttribute('id',listItemId);
-    var image = document.createElement("IMG");
-    image.setAttribute("src", "../resources/img/delete.jpg");
-    image.setAttribute("alt", "Delete Icon");
-    image.setAttribute("padding-top","1px");
+    li.setAttribute('class',listItemId);
     var removingButton = document.createElement("BUTTON");
-    removingButton.setAttribute("id", listItemId);
-    removingButton.setAttribute("onclick", 'removeWord(event)');
+    var text = document.createTextNode("X");
+    removingButton.appendChild(text);
+    removingButton.setAttribute("onclick", 'removeWord(\'' +listItemId+'\')');
     listItemId++;
-    removingButton.appendChild(image);
     li.appendChild(removingButton);
     ul.appendChild(li);
     cleanInputBox();
-    updateUniqueWordsList(newWord);
 }
 
-function removeWord(event){
-   // alert("***" + event);
+function removeWord(id){ //Tins function should be updated 
+    $("."+id).remove();
+    if (id > -1) {
+        words.splice(id, 1);
+    }
 }
 
 function cleanInputBox(){
     $('#newWord').val("");
 }
 
-function updateUniqueWordsList(word) {
+function showUniqueWordsList() {
+    var uniqueWords = [];
     $.each(words, function(i, word){
         if($.inArray(word, uniqueWords) === -1) uniqueWords.push(word);
-    })
-}
-
-function showUniqueWordsList() {
-    document.getElementById("demo").innerHTML = uniqueWords;
+    });
+    document.getElementById("demo").innerHTML = uniqueWords.toString();
 }

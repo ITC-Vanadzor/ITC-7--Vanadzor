@@ -17,14 +17,12 @@ input[type=text] {
 
 /* Set a style for all buttons */
 button {
-    padding: 14px 20px;
+    padding: 17px;
     margin: 8px;
-    width: 20%;
-    background-color: Transparent;
-    background-repeat:no-repeat;
     border: none;
     cursor:pointer;
     overflow: hidden;
+    background-repeat: no-repeat;
     outline:none;
 }
 
@@ -32,4 +30,12 @@ button {
 .img-container {
     text-align: center;
     margin: 24px 0 12px 0;
+}
+
+#addButton{
+    background-image: url(../resources/img/add.jpg);
+}
+
+#submitButton{
+    background-image: url(../resources/img/submit.jpg);
 }
