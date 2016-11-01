@@ -8,7 +8,7 @@ function addWord() {
     var ul = document.getElementById('list');
     var li = document.createElement("LI");
     li.appendChild(document.createTextNode(newWord));
-    li.setAttribute('class',listItemId);
+    li.setAttribute('id',listItemId);
     var removingButton = document.createElement("BUTTON");
     var text = document.createTextNode("X");
     removingButton.appendChild(text);
@@ -19,11 +19,22 @@ function addWord() {
     cleanInputBox();
 }
 
-function removeWord(id){ //Tins function should be updated 
-    $("."+id).remove();
-    if (id > -1) {
-        words.splice(id, 1);
-    }
+function removeWord(id){ //This function should be updated
+
+    var removingElement;
+   removingElement = document.getElementById("#"+id).textContent;
+    // alert(removingElement);
+    // for(var i=0; i<words.length;i++ )
+    //     {
+    //         if(words[i]==removingElement)
+    //         {
+    //             words.splice(i,1);
+    //             break;
+    //         }
+    //     }
+   // $("#"+id).remove();
+    alert(removingElement);
+
 }
 
 function cleanInputBox(){
