@@ -14,7 +14,7 @@ $( document ).ready(function() {
 
 function showGreetingMessage() {
     if ($("#myForm").valid()) {
-    var username = $.trim($("#uname").val());
+    var username = $.trim($('#uName').val());
     $(".hidden-element").hide();
         var greetingText = $("#greetingText");
         $(greetingText).html( 'Welcome ' + username);
