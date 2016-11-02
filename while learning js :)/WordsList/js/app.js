@@ -1,40 +1,37 @@
 var words = [];
 var listItemId;
 listItemId = 0;
-
 function addWord() {
     var newWord = $('#newWord').val();
     words.push(newWord.toLowerCase());
     var ul = document.getElementById('list');
-    var li = document.createElement("LI");
-    li.appendChild(document.createTextNode(newWord));
-    li.setAttribute('id',listItemId);
+    var span = $("<span></span>").text(newWord);
+    var li = $("<li id='" +listItemId+"'></li>");
     var removingButton = document.createElement("BUTTON");
     var text = document.createTextNode("X");
     removingButton.appendChild(text);
-    removingButton.setAttribute("onclick", 'removeWord(\'' +listItemId+'\')');
+    removingButton.setAttribute('onclick', 'removeWord(\'' +listItemId+'\')');
+    removingButton.setAttribute('type', 'button');
     listItemId++;
-    li.appendChild(removingButton);
-    ul.appendChild(li);
+    $(li).append(span);
+    $(li).append(removingButton);
+    listItemId++;
+    $(ul).append(li);
     cleanInputBox();
 }
 
-function removeWord(id){ //This function should be updated
-
+function removeWord(id){
     var removingElement;
-   removingElement = document.getElementById("#"+id).textContent;
-    // alert(removingElement);
-    // for(var i=0; i<words.length;i++ )
-    //     {
-    //         if(words[i]==removingElement)
-    //         {
-    //             words.splice(i,1);
-    //             break;
-    //         }
-    //     }
-   // $("#"+id).remove();
-    alert(removingElement);
-
+    removingElement =  $("#"+id+' span').text();
+    for(var i=0; i<words.length;i++ )
+        {
+            if(words[i]==removingElement)
+            {
+                words.splice(i,1);
+                break;
+            }
+        }
+    $("#"+id).remove();
 }
 
 function cleanInputBox(){
