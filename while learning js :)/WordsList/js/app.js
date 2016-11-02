@@ -7,11 +7,7 @@ function addWord() {
     var ul = document.getElementById('list');
     var span = $("<span></span>").text(newWord);
     var li = $("<li id='" +listItemId+"'></li>");
-    var removingButton = document.createElement("BUTTON");
-    var text = document.createTextNode("X");
-    removingButton.appendChild(text);
-    removingButton.setAttribute('onclick', 'removeWord(\'' +listItemId+'\')');
-    removingButton.setAttribute('type', 'button');
+    var removingButton = $("<button type=\"button\" onclick=\"removeWord('"+listItemId+"')\" >X</button>");
     listItemId++;
     $(li).append(span);
     $(li).append(removingButton);
