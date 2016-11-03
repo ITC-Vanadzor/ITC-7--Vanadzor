@@ -1,23 +1,19 @@
 var words = [];
-var listItemId;
-listItemId = 0;
 function addWord() {
     var newWord = $('#newWord').val();
     words.push(newWord.toLowerCase());
     var ul = document.getElementById('list');
     var span = $("<span></span>").text(newWord);
-    var li = $("<li id='" +listItemId+"'></li>");
-    var removingButton = $("<button type=\"button\" onclick=\"removeWord('"+listItemId+"')\" >X</button>");
+    var li = $("<li></li>");
+    var removingButton = $("<button type=\"button\" onclick=\"removeWord(this)\" >X</button>");
     $(li).append(span);
     $(li).append(removingButton);
-    listItemId++;
     $(ul).append(li);
     cleanInputBox();
 }
 
-function removeWord(id){
-    var removingElement;
-    removingElement =  $("#"+id+' span').text();
+function removeWord(element){
+    var removingElement = $(element).prev().text();
     for(var i=0; i<words.length;i++ )
     {
         if(words[i]==removingElement)
@@ -26,7 +22,7 @@ function removeWord(id){
             break;
         }
     }
-    $("#"+id).remove();
+    $(element).parent('li').remove();
 }
 
 function cleanInputBox(){
