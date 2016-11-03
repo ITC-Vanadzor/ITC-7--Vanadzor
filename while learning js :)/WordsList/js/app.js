@@ -3,9 +3,9 @@ function addWord() {
     var newWord = $('#newWord').val();
     words.push(newWord.toLowerCase());
     var ul = document.getElementById('list');
-    var span = $("<span></span>").text(newWord);
+    var span = $("<span id='listSpan'></span>").text(newWord);
     var li = $("<li></li>");
-    var removingButton = $("<button type=\"button\" onclick=\"removeWord(this)\" >X</button>");
+    var removingButton = $("<button type='button' onclick='removeWord(this)' id='deleteButton'></button>");
     $(li).append(span);
     $(li).append(removingButton);
     $(ul).append(li);

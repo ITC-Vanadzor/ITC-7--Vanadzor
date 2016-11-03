@@ -17,13 +17,10 @@ input[type=text] {
 
 /* Set a style for all buttons */
 button {
-    padding: 17px;
-    margin: 8px;
+
     border: none;
     cursor:pointer;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    outline:none;
+    background-color: Transparent;
 }
 
 /* Center the avatar image inside this container */
@@ -34,8 +31,23 @@ button {
 
 #addButton{
     background-image: url(../resources/img/add.jpg);
+    padding: 15px;
+    margin: 8px;
 }
 
 #submitButton{
     background-image: url(../resources/img/submit.jpg);
+    margin: 35px;
+    padding: 17px;
+}
+
+#deleteButton{
+    background-image: url(../resources/img/delete.jpg);
+    background-repeat: no-repeat;
+    padding: 17px;
+    margin: 8px;
+}
+
+#listSpan{
+    margin-right:50px;
 }
