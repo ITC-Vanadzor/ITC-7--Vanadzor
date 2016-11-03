@@ -15,14 +15,6 @@ input[type=text] {
     box-sizing: border-box;
 }
 
-/* Set a style for all buttons */
-button {
-
-    border: none;
-    cursor:pointer;
-    background-color: Transparent;
-}
-
 /* Center the avatar image inside this container */
 .img-container {
     text-align: center;
@@ -30,20 +22,30 @@ button {
 }
 
 #addButton{
+    border: none;
+    cursor:pointer;
     background-image: url(../resources/img/add.jpg);
-    padding: 15px;
+    padding: 23px;
     margin: 8px;
+    background-color: Transparent;
+    background-repeat: no-repeat;
 }
 
 #submitButton{
+    border: none;
+    cursor:pointer;
     background-image: url(../resources/img/submit.jpg);
+    background-color: Transparent;
     margin: 35px;
     padding: 17px;
 }
 
 #deleteButton{
+    border: none;
+    cursor:pointer;
     background-image: url(../resources/img/delete.jpg);
     background-repeat: no-repeat;
+    background-color: Transparent;
     padding: 17px;
     margin: 8px;
 }
@@ -51,3 +53,9 @@ button {
 #listSpan{
     margin-right:50px;
 }
+
+.listItem{
+    margin-left:20px;
+}
+
+

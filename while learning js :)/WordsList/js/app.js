@@ -4,7 +4,7 @@ function addWord() {
     words.push(newWord.toLowerCase());
     var ul = document.getElementById('list');
     var span = $("<span id='listSpan'></span>").text(newWord);
-    var li = $("<li></li>");
+    var li = $("<li class='listItem'></li>");
     var removingButton = $("<button type='button' onclick='removeWord(this)' id='deleteButton'></button>");
     $(li).append(span);
     $(li).append(removingButton);
