@@ -14,13 +14,10 @@ function addWord() {
 
 function removeWord(element){
     var removingElement = $(element).prev().text();
-    for(var i=0; i<words.length;i++ )
-    {
-        if(words[i]==removingElement)
-        {
-            words.splice(i,1);
-            break;
-        }
+    var index = words.indexOf(removingElement);
+    if (index > -1) {
+        words.splice(index, 1);
+        $.unique(words.slice()).toString()
     }
     $(element).parent('li').remove();
 }
@@ -30,9 +27,5 @@ function cleanInputBox(){
 }
 
 function showUniqueWordsList() {
-    var uniqueWords = [];
-    $.each(words, function(i, word){
-        if($.inArray(word, uniqueWords) === -1) uniqueWords.push(word);
-    });
-    document.getElementById("demo").innerHTML = uniqueWords.toString();
+    document.getElementById("demo").innerHTML =  $.unique(words.slice()).toString();
 }
