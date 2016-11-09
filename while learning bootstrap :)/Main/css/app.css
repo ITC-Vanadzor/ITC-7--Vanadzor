@@ -1,0 +1,23 @@
+#logoImg{
+    /*width: 20px;*/
+}
+
+.messagesNumber{
+    color: #9295a1;
+    padding-top: 1px;
+}
+
+.paragraphMessages{
+    color: #595959;
+    padding-top: 1px;
+}
+.mainMessage{
+    margin-top: 8px;
+}
+.mainMessage>p{
+    margin-bottom: 11px;
+}
+.messageLogo{
+    padding-right: 5px;
+}
+
