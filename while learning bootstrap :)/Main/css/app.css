@@ -21,3 +21,17 @@
     padding-right: 5px;
 }
 
+body .container-fluid .inside {
+    max-width: 1170px;
+    margin: auto;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+}
+
+body {
+    min-width: 320px;
+    padding-right: 0!important;
+    font-family: "Open Sans",sans-serif;
+}
