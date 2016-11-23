@@ -177,19 +177,19 @@ body .container-fluid .inside {
 @media only screen and (min-width: 770px) {
     #firstItem {
         border-width: 1px;
-        border-right: solid #c5cad8;
+        border-right: solid thin #c5cad8;
     }
 
     #fourthItem {
         border-width: 1px;
-        border-top: solid #c5cad8;
+        border-top: solid thin #c5cad8;
         padding-top: 20px;
     }
 
     #thirdItem {
         border-width: 1px;
-        border-top: solid #c5cad8;
-        border-right: solid #c5cad8;
+        border-top: solid thin #c5cad8;
+        border-right: solid thin #c5cad8;
         padding-top: 20px;
     }
 }
@@ -198,24 +198,31 @@ body .container-fluid .inside {
 
     #firstItem {
         border-width: 1px;
-        border-bottom: solid #c5cad8;
+        border-bottom: solid thin #c5cad8;
         margin-bottom: 20px;
     }
 
     #fourthItem {
         border-width: 1px;
-        border-top: solid #c5cad8;
+        border-top: solid thin #c5cad8;
         padding-top: 20px;
     }
 
     #thirdItem {
         border-width: 1px;
-        border-top: solid #c5cad8;
+        border-top: solid thin #c5cad8;
         padding-top: 20px;
     }
 }
 
-#selector {
+#selector option{
+    background: #e0e4ef;
+    border-radius: 0;
+    color: #fff;
+    font-size: 18px;
+}
+
+#selector{
     background: #837EAC;
     border-radius: 0;
     color: #fff;
