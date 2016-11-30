@@ -56,8 +56,6 @@ body .container-fluid .inside {
 /*max-width: 500px;*/
 /*}*/
 
-
-
 .navigation-list-hr {
     border-top: 1px solid #c5cad8;
     margin-top: 10px;
@@ -69,7 +67,7 @@ body .container-fluid .inside {
     font-size: 14px;
 }
 
-.skills-dram-buss{
+.skills-dram-buss {
     margin-bottom: 20px;
 }
 
@@ -117,6 +115,10 @@ body .container-fluid .inside {
     margin-bottom: 20px;
 }
 
+.about {
+    margin-bottom: 25px;
+}
+
 .about p {
     font-size: 22px;
 }
@@ -127,6 +129,7 @@ body .container-fluid .inside {
 
 .wish-list {
     background-color: #807fac;
+    margin-bottom: 40px;
 }
 
 .wish-list > div > p:first-of-type {
@@ -146,7 +149,6 @@ body .container-fluid .inside {
 .wish-list-item > span {
     color: white;
     float: left;
-    /*width: 50%;*/
 }
 
 .wish-list-item {
@@ -154,11 +156,10 @@ body .container-fluid .inside {
 }
 
 .comments-and-support span {
-    color: white;
-    margin-right: 20px;
+    font-size: 15px
 }
 
-#support {
+#supportButton {
     border-radius: 24px;
     border-color: white;
     background-color: #837eac;
@@ -182,11 +183,22 @@ body .container-fluid .inside {
 .comments-and-support > div {
     margin-bottom: 20px;
 }
-#works-title{
+
+#works-title {
     font-size: 20px;
     font-weight: 500;
 }
-.works-list span {
+
+.works-list > div > {
+    padding-right: -15px;
+
+}
+
+.works-list-by {
+    margin-right: 10px;
+}
+
+.works-list span, .by-person span {
     font-size: 14px;
 }
 
@@ -196,28 +208,119 @@ body .container-fluid .inside {
     margin-bottom: 15px;
 }
 
-.works-comment{
-    color: #9295a1;
-    margin-bottom: 20px;
-}
-
 @media (max-width: 767px) {
-    .second-person{
+    .second-person {
         margin-left: 23px;
     }
 }
 
-/*.work-item-title >span{*/
-    /*float: left;*/
-    /*margin-right: 100px;*/
-    /*margin-bottom: 65px;*/
-/*}*/
+.work-item-title >span{
+    vertical-align: top;
+}
 
 /*.work-item-title >img{*/
-    /*float: left;*/
+/*float: left;*/
 /*}*/
 
+.about-yourself {
+    border-bottom: 1px solid #dee3f1;
+    border-left: 1px solid #dee3f1;
+    border-right: 1px solid #dee3f1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+
+}
+
+.about-yourself > p {
+    padding-top: 15px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+#items-section-title {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.items-section {
+    margin-bottom: 15px;
+}
+
+.by-person {
+    padding-left: 10px;
+}
+
+.by-person > span {
+    padding-right: 10px;
+}
+
+.by-person img {
+    padding-right: 7px;
+}
+
+.costs {
+    padding-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.costs span {
+    padding-right: 15px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.costs img {
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 50px;
+    border-right: 1px solid #c5cad8;
+    border-left: 1px solid #c5cad8;
+}
+
+.likes-comments {
+    color: #9295a1;
+    font-size: 15px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.likes-comments span {
+    padding-right: -15px;
+}
 
 .comment-icon {
-    margin-left: 20px;
+    margin-left: 10px;
+}
+
+#buyButton {
+    border-radius: 28px;
+    border-color: white;
+    background-color: #4e4f59;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    outline: none;
+    width: 80px;
+    margin-left: 15px;
+}
+
+.buy-button {
+    border-radius: 24px;
+    border-color: #888888;
+    border-width: 1px;
+    background-color:white ;
+    color: #888888;
+    font-size: 14px;
+    font-weight: 700;
+    outline: none;
+    width: 80px;
+    height: 30px;
+    margin-left: 15px;
+}
+
+.items-container{
+    width: 264px;
 }

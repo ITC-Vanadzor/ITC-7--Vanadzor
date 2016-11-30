@@ -18,7 +18,6 @@
 <br>
 <div class="container-fluid">
     <div class="inside">
-
         <div class="row">
             <div class="col-xs-12 col-sm-6 ">
                 <p class="skills">Skills</p>
@@ -105,11 +104,11 @@
                 </div>
                 <div class="row comments-and-support">
                     <div class="col-xs-12 col-sm-6 col-md-6 ">
-                        <img src="../resources/img/like.svg"> 123
-                        <img class="comment-icon" src="../resources/img/comment.svg"> 12
+                        <img src="../resources/img/like.svg"> <span> 123 </span>
+                        <img class="comment-icon" src="../resources/img/comment.svg"> <span>12</span>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6 ">
-                        <button id="support" type="button" class="btn">SUPPORT</button>
+                        <button id="supportButton" type="button" class="btn">SUPPORT</button>
                     </div>
 
                 </div>
@@ -131,8 +130,8 @@
                     eusmod
                     tincidunt ut laoreet dolore</p>
                 <div class="row works-list">
-                    <div class="col-xs-12 col-sm-7">
-                        <span>by:</span>
+                    <div class="col-xs-12 col-sm-6">
+                        <span class="works-list-by">by:</span>
                         <img src="../resources/img/1.png">
                         <span> Jackson Rolling</span>
                     </div>
@@ -145,22 +144,25 @@
                         <hr class="works-hr">
                     </div>
 
-                    <div class="col-xs-12 works-comment">
-                        <img src="../resources/img/like.svg"> 123
-                        <img class="comment-icon" src="../resources/img/comment.svg"> 12
+                    <div class="col-xs-12 likes-comments">
+                        <img src="../resources/img/like.svg"> <span>123</span>
+                        <img class="comment-icon" src="../resources/img/comment.svg"> <span>12</span>
                     </div>
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-6 col-md-4">
-                <img src="../resources/img/works.png">
-                <span>"Life on Display" Illustration</span>
+                <div class="work-item-title">
+                    <img src="../resources/img/works.png">
+                    <span>"Life on Display" Illustration</span>
+                </div>
+
                 <p>Short Description About Upcoming Project consectetuer adipiscing elit, sed diam nonummy nibh
                     eusmod
                     tincidunt ut laoreet dolore</p>
                 <div class="row works-list">
-                    <div class="col-xs-12 col-sm-7">
-                        <span>by:</span>
+                    <div class="col-xs-12 col-sm-6">
+                        <span class="works-list-by">by:</span>
                         <img src="../resources/img/1.png">
                         <span> Jackson Rolling</span>
                     </div>
@@ -168,12 +170,119 @@
                         <img src="../resources/img/2.png">
                         <span>Tomas Raylie</span>
                     </div>
-                    <div class="col-xs-12 col-sm-12">
+
+                    <div class="col-xs-12">
                         <hr class="works-hr">
                     </div>
-                    <div class="col-xs-12 works-comment">
-                        <img src="../resources/img/like.svg"> 123
-                        <img class="comment-icon" src="../resources/img/comment.svg"> 12
+
+                    <div class="col-xs-12 likes-comments">
+                        <img src="../resources/img/like.svg"> <span>123</span>
+                        <img class="comment-icon" src="../resources/img/comment.svg"> <span>12</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--***-->
+        <div class="row items-section">
+            <div class="col-xs-12">
+                <p id="items-section-title">Items</p>
+            </div>
+            <div class="col-xs-12 col-sm-3 ">
+                <div class="items-container">
+                    <div class=" images">
+                        <img src="../resources/img/Image1.png">
+                    </div>
+                    <div class=" about-yourself">
+                        <p>Introduce Yourself</p>
+                        <div class="by-person">
+                            <span>by:</span>
+                            <img src="../resources/img/1.png">
+                            <span> Jackson Rolling</span>
+                        </div>
+                        <div class="costs">
+                            <span>7.89$</span>
+                            <img src="../resources/img/cart.png">
+                            <button id="buyButton" type="button" class="btn">BUY</button>
+                        </div>
+                        <div class="likes-comments">
+                            <img src="../resources/img/like.svg"> <span>123</span>
+                            <img class="comment-icon" src="../resources/img/comment.svg"> <span> 12</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <div class="items-container">
+                    <div class=" images">
+                        <img src="../resources/img/Image2.png">
+                    </div>
+                    <div class=" about-yourself">
+                        <p>Introduce Yourself</p>
+                        <div class="by-person">
+                            <span>by:</span>
+                            <img src="../resources/img/1.png">
+                            <span> Jackson Rolling</span>
+                        </div>
+                        <div class="costs">
+                            <span>7.89$</span>
+                            <img src="../resources/img/cart.png">
+                            <button class="buy-button" type="button" class="btn">BUY</button>
+                        </div>
+                        <div class="likes-comments">
+                            <img src="../resources/img/like.svg"> <span>123</span>
+                            <img class="comment-icon" src="../resources/img/comment.svg"> <span> 12</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <div class="items-container">
+                    <div class=" images">
+                        <img src="../resources/img/Image3.png">
+                    </div>
+                    <div class=" about-yourself">
+                        <p>Introduce Yourself</p>
+                        <div class="by-person">
+                            <span>by:</span>
+                            <img src="../resources/img/1.png">
+                            <span> Jackson Rolling</span>
+                        </div>
+                        <div class="costs">
+                            <span>7.89$</span>
+                            <img src="../resources/img/cart.png">
+                            <button class="buy-button" type="button" class="btn">BUY</button>
+                        </div>
+                        <div class="likes-comments">
+                            <img src="../resources/img/like.svg"> <span>123</span>
+                            <img class="comment-icon" src="../resources/img/comment.svg"> <span> 12</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <div class="items-container">
+                    <div class=" images">
+                        <img src="../resources/img/Image4.png">
+                    </div>
+                    <div class=" about-yourself">
+                        <p>Introduce Yourself</p>
+                        <div class="by-person">
+                            <span>by:</span>
+                            <img src="../resources/img/1.png">
+                            <span> Jackson Rolling</span>
+                        </div>
+                        <div class="costs">
+                            <span>7.89$</span>
+                            <img src="../resources/img/cart.png">
+                            <button class="buy-button" type="button" class="btn">BUY</button>
+                        </div>
+                        <div class="likes-comments">
+                            <img src="../resources/img/like.svg"> <span>123</span>
+                            <img class="comment-icon" src="../resources/img/comment.svg"> <span> 12</span>
+                        </div>
                     </div>
                 </div>
             </div>
