@@ -1,11 +1,14 @@
-body .container-fluid .inside {
-    max-width: 1170px;
-    margin: auto;
-    min-width: 320px;
-    padding-right: 0 !important;
+body .container-fluid {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     line-height: 1.5;
+}
+
+.inside {
+    max-width: 1200px;
+    margin: auto;
+    min-width: 320px;
+    padding-right: 0 !important;
 }
 
 /*#profileBackgroundImage{*/
@@ -83,6 +86,47 @@ body .container-fluid .inside {
     outline: none;
 }
 
+.skill-section-image {
+    float: left;
+    margin-right: 5px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+}
+
+.skills-section-image_1 {
+    background-image: url(../resources/img/1.png);
+}
+
+.skills-section-image_2 {
+    background-image: url(../resources/img/2.png);
+}
+
+.images {
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 280px;
+    height: 280px;
+
+}
+
+.image1 {
+    background-image: url(../resources/img/Image1.png);
+}
+
+.image2 {
+    background-image: url(../resources/img/Image2.png);
+}
+
+.image3 {
+    background-image: url(../resources/img/Image3.png);
+}
+
+.image4 {
+    background-image: url(../resources/img/Image4.png);
+}
+
 @media (min-width: 768px) {
     .account-icons {
         float: right;
@@ -95,7 +139,6 @@ body .container-fluid .inside {
         margin-right: 5px;
         margin-top: 15px;
     }
-
 }
 
 #high-score-button {
@@ -132,7 +175,7 @@ body .container-fluid .inside {
     margin-bottom: 40px;
 }
 
-.wish-list > div > p:first-of-type {
+.wish-list > .inside > div > p:first-of-type {
     margin-top: 20px;
     color: white;
     font-size: 20px;
@@ -148,7 +191,6 @@ body .container-fluid .inside {
 
 .wish-list-item > span {
     color: white;
-    float: left;
 }
 
 .wish-list-item {
@@ -167,13 +209,13 @@ body .container-fluid .inside {
     font-size: 14px;
     font-weight: 700;
     outline: none;
-    margin-left: 50px;
 }
 
-.comments-and-support {
-    padding-top: 20px;
-    background-color: #837eac;
-    padding-bottom: 20px;
+@media (max-width: 767px) {
+    .comments-and-support > .support-button-div {
+        /*float: right;*/
+        text-align: center
+    }
 }
 
 .comments-and-support {
@@ -181,6 +223,7 @@ body .container-fluid .inside {
 }
 
 .comments-and-support > div {
+    margin-top: 15px;
     margin-bottom: 20px;
 }
 
@@ -189,23 +232,33 @@ body .container-fluid .inside {
     font-weight: 500;
 }
 
-.works-list > div > {
-    padding-right: -15px;
+.authors > div:first-of-type {
+    float: left;
+    background-size: cover;
 
 }
 
-.works-list-by {
-    margin-right: 10px;
+.authors > div:last-of-type {
+    float: left;
+    padding-left: 40px;
+    background-size: cover;
 }
 
 .works-list span, .by-person span {
     font-size: 14px;
 }
 
+.works-list-by {
+    float: left;
+    max-width: 20px;
+    font-size: 14px;
+    margin-right: 20px;
+}
+
 .works-hr {
     border-top: 1px solid #c5cad8;
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 767px) {
@@ -214,20 +267,19 @@ body .container-fluid .inside {
     }
 }
 
-.work-item-title >span{
+.work-item-title > span {
     vertical-align: top;
 }
 
-/*.work-item-title >img{*/
-/*float: left;*/
-/*}*/
+.work-item-title {
+    background-size: cover;
+}
 
 .about-yourself {
     border-bottom: 1px solid #dee3f1;
     border-left: 1px solid #dee3f1;
     border-right: 1px solid #dee3f1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
 
@@ -239,13 +291,23 @@ body .container-fluid .inside {
     padding-left: 10px;
 }
 
-#items-section-title {
+.items {
     font-size: 19px;
     font-weight: 600;
 }
 
+.items-section-title {
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.all-items {
+    float: right;
+}
+
 .items-section {
     margin-bottom: 15px;
+    background-color: rgba(48, 0, 255, 0.08);
 }
 
 .by-person {
@@ -283,12 +345,8 @@ body .container-fluid .inside {
 .likes-comments {
     color: #9295a1;
     font-size: 15px;
-    padding-left: 10px;
+    padding-left: 15px;
     margin-bottom: 20px;
-}
-
-.likes-comments span {
-    padding-right: -15px;
 }
 
 .comment-icon {
@@ -296,7 +354,7 @@ body .container-fluid .inside {
 }
 
 #buyButton {
-    border-radius: 28px;
+    border-radius: 24px;
     border-color: white;
     background-color: #4e4f59;
     color: #fff;
@@ -310,17 +368,89 @@ body .container-fluid .inside {
 .buy-button {
     border-radius: 24px;
     border-color: #888888;
-    border-width: 1px;
-    background-color:white ;
-    color: #888888;
+    background-color: #fff;
+    color: #888;
     font-size: 14px;
     font-weight: 700;
     outline: none;
     width: 80px;
-    height: 30px;
     margin-left: 15px;
 }
 
-.items-container{
-    width: 264px;
+.items-container {
+    width: 280px;
+    margin-bottom: 30px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.items-container > div {
+    background-size: cover;
+}
+
+#allItems {
+    vertical-align: top;
+}
+
+.endorsements > p:first-of-type {
+    font-size: 20px;
+    font-weight: 700;
+    float: left;
+}
+
+.endorsements > span {
+    float: right;
+}
+
+.endorsement {
+    margin-bottom: 60px;
+}
+
+.painting-master {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.markets {
+    background-color: rgba(198, 187, 255, 0.76);
+}
+
+.markets-title {
+    float: left;
+    padding-left: 15px;
+    font-weight: bold;
+    margin-right: 20px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+.h-navigation-list > li.active > span {
+    color: white;
+}
+
+.h-navigation-list > li.active {
+    background-color: #837eac;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.h-navigation-list > li {
+    margin-right: 10px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+li.active:after {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    left: 50%;
+    margin-left: -10px;
+    display: block;
+    width: 21px;
+    border-top: 10px solid #837eac;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
 }
