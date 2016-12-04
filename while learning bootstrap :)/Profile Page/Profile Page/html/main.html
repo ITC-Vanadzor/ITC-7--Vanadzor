@@ -10,12 +10,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Open Sans">
+   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open Sans">
     <link rel="stylesheet" type="text/css" href="../css/app.css">
 </head>
 <body>
-<br>
 <div class="container-fluid">
     <div class="row">
         <div class="inside">
@@ -204,20 +202,34 @@
 
     <div class="row markets">
         <div class="inside">
-            <span class="markets-title"> Markets: </span>
+            <div class="col-xs-12 hidden-sm hidden-md hidden-lg ">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <span class="markets-title"> Markets: </span>
+                    </div>
+                    <div class="col-xs-8 row-selector">
+                        <select id="selector" class="form-control select-list">
+                            <option>All</option>
+                            <option>Music & Audio</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
 
-            <ul class="nav nav-pills h-navigation-list">
-                <li class="active current"><span>Visual Art</span></li>
-                <li><span>Music & Audio</span></li>
-            </ul>
+            <div class="hidden-xs col-sm-12">
+                <span class="markets-title"> Markets: </span>
+
+                <ul class="nav nav-pills h-navigation-list">
+                    <li class="active current"><span>Visual Art</span></li>
+                    <li><span>Music & Audio</span></li>
+                </ul>
+            </div>
         </div>
     </div>
-
-
     <div class="row items-section">
         <div class="inside">
             <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
-                <span class="items">Items</span>
+                <p class="items items-section-title">Items</p>
             </div>
             <div class="hidden-xs col-sm-12">
                 <div class="row items-section-title">
@@ -323,7 +335,7 @@
             </div>
 
             <div class="col-xs-12 hidden-sm hidden-md hidden-lg text-center">
-                <span>All Items</span>
+                <p class="all-items-bottom text-center">All Items</p>
             </div>
         </div>
     </div>
@@ -373,7 +385,7 @@
         </div>
 
         <div class="col-xs-12 hidden-sm hidden-md hidden-lg text-center">
-            <span>All Endorsements</span>
+            <p class="all-endorsements-bottom">All Endorsements</p>
         </div>
     </div>
 </div>

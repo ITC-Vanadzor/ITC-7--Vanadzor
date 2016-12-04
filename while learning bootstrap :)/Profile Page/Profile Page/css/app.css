@@ -1,4 +1,4 @@
-body .container-fluid {
+body, .container-fluid {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -294,6 +294,7 @@ body .container-fluid {
 .items {
     font-size: 19px;
     font-weight: 600;
+
 }
 
 .items-section-title {
@@ -303,6 +304,10 @@ body .container-fluid {
 
 .all-items {
     float: right;
+}
+
+.all-items-bottom, .all-endorsements-bottom {
+    margin-bottom: 40px;
 }
 
 .items-section {
@@ -435,7 +440,6 @@ body .container-fluid {
     padding-right: 10px;
 
 }
-
 .h-navigation-list > li {
     margin-right: 10px;
     padding-top: 11px;
@@ -453,4 +457,26 @@ li.active:after {
     border-top: 10px solid #837eac;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent;
+}
+
+
+#selector option{
+    background: #e0e4ef;
+    border-radius: 0;
+    color: #fff;
+    font-size: 18px;
+}
+
+#selector{
+    background: #837EAC;
+    border-radius: 0;
+    color: #fff;
+    font-size: 18px;
+    height: 46px;
+    padding-right: 15px;
+
+}
+
+.row-selector{
+    padding-right: 0px;
 }
