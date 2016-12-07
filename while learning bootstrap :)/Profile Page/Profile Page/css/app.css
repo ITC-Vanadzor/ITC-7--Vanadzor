@@ -93,6 +93,7 @@ body, .container-fluid {
     background-size: cover;
     padding-bottom: 19px;
     padding-top: 20px;
+    margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {
