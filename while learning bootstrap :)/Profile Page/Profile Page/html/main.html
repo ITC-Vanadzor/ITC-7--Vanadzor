@@ -10,11 +10,66 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open Sans">
     <link rel="stylesheet" type="text/css" href="../css/app.css">
 </head>
 <body>
 <div class="container-fluid">
+
+    <!--The first part-->
+    <div class="row header">
+        <div class="inside">
+            <div class="row">
+                <div class="col-sm-5 hidden-xs button-container">
+                    <button type="button" class="btn  btn-default myButton request">REQUEST</button>
+                </div>
+                <div class="col-xs-4 hidden-sm hidden-md hidden-lg btn-container">
+                    <button type="button" class="btn  btn-default myButton req">R</button>
+                </div>
+                <div class="col-xs-4 col-sm-2">
+                    <div id="profileImage"></div>
+                </div>
+                <div class="col-sm-5 hidden-xs button-container">
+                    <button type="button" class="btn myButton btn-default message">MESSAGE</button>
+                </div>
+                <div class="col-xs-4 hidden-sm hidden-md hidden-lg btn-container">
+                    <button type="button" class="btn myButton btn-default msg">M</button>
+                </div>
+                <div class="col-xs-12 text-center"><p id="account">Jackson Rolling</p></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8 col-sm-7">
+                    <div class="following">
+                        <div class="hidden-lg hidden-md hidden-sm text-center"><p class="test">Followers <br> 25 </p>
+                        </div>
+                        <div class="hidden-xs"><p>Followers 25 </p></div>
+                        <div id="followers"></div>
+                        <div class="hidden-lg hidden-md hidden-sm text-center"><p>Following <br> 123</p></div>
+                        <div class="hidden-xs "><p>Following 123</p></div>
+                    </div>
+                </div>
+                <div class="follow-button-col">
+                    <div class="col-xs-4 col-sm-5">
+                        <button type="button" class="btn btn-default follow">FOLLOW</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 text-center soc-icons-container">
+                    <img class="soc-icon-fb" src="../resources/img/facebook.svg" alt="fb">
+                    <img class="soc-icon" src="../resources/img/twitter.svg" alt="tw">
+                    <img class="soc-icon" src="../resources/img/googleplus.svg" alt="G+">
+
+                </div>
+                <div class="col-xs-12 text-center description">
+                    <p>Cup od Tea Feed - Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--The second part-->
+
     <div class="row">
         <div class="inside">
             <div class="col-xs-12 col-sm-6 ">
@@ -94,6 +149,8 @@
         </div>
     </div>
 
+    <!--3rd part-->
+
     <div class="row wish-list ">
         <div class="inside">
             <div class="col-xs-12 col-sm-12 col-md-12 ">
@@ -121,9 +178,9 @@
                 </div>
             </div>
         </div>
-
     </div>
 
+    <!--4th part-->
     <div class="row">
         <div class="inside">
             <div class="col-xs-12 col-sm-12 col-md-12 ">
