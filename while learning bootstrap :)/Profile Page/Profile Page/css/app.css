@@ -93,7 +93,7 @@ body, .container-fluid {
     background-size: cover;
     padding-bottom: 19px;
     padding-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 @media (min-width: 768px) {
@@ -277,12 +277,13 @@ body, .container-fluid {
 }
 
 .about-person {
-    margin-top: 24px;
+    margin-top: 27px;
 }
 
 .wish-list {
     background-color: #807fac;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
+    margin-top: 11px;
 }
 
 .wish-list > .inside > div > p:first-of-type {
@@ -293,14 +294,9 @@ body, .container-fluid {
 }
 
 .wish-list-item > p:last-of-type {
-    margin-top: 15px;
     color: white;
     font-size: 16px;
     font-weight: bold;
-}
-
-.wish-list-item > span {
-    color: white;
 }
 
 .wish-list-item {
@@ -323,7 +319,6 @@ body, .container-fluid {
 
 @media (max-width: 767px) {
     .comments-and-support > .support-button-div {
-        /*float: right;*/
         text-align: center
     }
 }
@@ -333,13 +328,36 @@ body, .container-fluid {
 }
 
 .comments-and-support > div {
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin-top: 25px;
+    margin-bottom: 18px;
 }
+
+.works-items{
+    margin-bottom: 12px;
+}
+
+.works-items + p{
+    margin-bottom: 10px;
+}
+
 
 #works-title {
     font-size: 20px;
     font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.works-item{
+    background-image: url(../resources/img/works.png);
+    background-size: cover;
+    width: 71px;
+    height: 74px;
+    float: left;
+}
+
+.works-item-title{
+    height: 74px;
+
 }
 
 .authors > div:first-of-type {
@@ -363,6 +381,7 @@ body, .container-fluid {
     max-width: 20px;
     font-size: 14px;
     margin-right: 20px;
+    margin-top: 2px;
 }
 
 .works-hr {
@@ -375,14 +394,6 @@ body, .container-fluid {
     .second-person {
         margin-left: 23px;
     }
-}
-
-.work-item-title > span {
-    vertical-align: top;
-}
-
-.work-item-title {
-    background-size: cover;
 }
 
 .about-yourself {
@@ -421,6 +432,7 @@ body, .container-fluid {
 }
 
 .items-section {
+    padding-bottom: 80px;
     margin-bottom: 15px;
     background-color: rgba(48, 0, 255, 0.08);
 }
@@ -498,6 +510,7 @@ body, .container-fluid {
     background-color: white;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
 }
 
 .items-container > div {
@@ -529,6 +542,7 @@ body, .container-fluid {
 
 .markets {
     background-color: rgba(198, 187, 255, 0.76);
+    margin-top: 70px;
 }
 
 .markets-title {
@@ -538,6 +552,7 @@ body, .container-fluid {
     margin-right: 20px;
     padding-top: 11px;
     padding-bottom: 11px;
+
 }
 
 .h-navigation-list > li.active > span {
