@@ -1,11 +1,15 @@
-body .container-fluid .inside {
+body .container-fluid {
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.inside {
     max-width: 1170px;
     margin: auto;
     min-width: 320px;
     padding-right: 0 !important;
-    font-family: "Open Sans", sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
 }
 
 .player {
@@ -13,6 +17,8 @@ body .container-fluid .inside {
     max-width: 555px;
     background-image: url(../resources/img/play.png);
     background-size: cover;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .author-image {
@@ -28,9 +34,15 @@ body .container-fluid .inside {
     margin-top: 44px;
 }
 
-.description > p {
+.title {
     font-size: 29px;
     font-weight: bold;
+}
+
+.dr-watercolor {
+    font-size: 15px;
+    color: rgba(113, 94, 178, 0.71);
+    font-style: italic;
 }
 
 .author {
@@ -38,7 +50,7 @@ body .container-fluid .inside {
     margin-bottom: 44px;
 }
 
-.by{
+.by {
     float: left;
     margin-right: 15px;
 }
@@ -64,7 +76,7 @@ body .container-fluid .inside {
     border-left: 1px solid #c5cad8;
 }
 
-.costs{
+.costs {
     margin-bottom: 40px;
 }
 
@@ -87,9 +99,8 @@ body .container-fluid .inside {
 }
 
 .likes-comments span {
-  margin-right: 10px;
+    margin-right: 10px;
 }
-
 
 .soc-icon-g {
     width: 24px;
@@ -101,13 +112,14 @@ body .container-fluid .inside {
     margin-right: 10px;
 
 }
+
 .soc-icon-tw {
     padding-top: 5px;
     width: 20px;
     margin-right: 10px;
 }
 
-.soc-icons-container p{
+.soc-icons-container p {
     font-size: 15px;
     margin-right: 15px;
     float: left;
@@ -115,16 +127,16 @@ body .container-fluid .inside {
 
 }
 
-.similar-items{
+.similar-items {
     margin-top: 102px;
 }
 
-.similar-items-title{
+.similar-items-title {
     font-size: 22px;
     font-weight: 600;
 }
 
-.player-image{
+.player-image {
     height: 120px;
     width: 250px;
     background-image: url(../resources/img/play.png);
@@ -137,7 +149,7 @@ body .container-fluid .inside {
     padding-left: 10px;
 }
 
-.by-small{
+.by-small {
     float: left;
     margin-right: 7px;
     padding-top: 10px;
@@ -167,7 +179,7 @@ body .container-fluid .inside {
     float: left;
 }
 
-.costs-small>img {
+.costs-small > img {
     padding-right: 17px;
     padding-left: 17px;
     width: 55px;
@@ -176,11 +188,11 @@ body .container-fluid .inside {
     margin-bottom: 10px;
 }
 
-.costs-small{
+.costs-small {
     margin-bottom: 10px;
 }
 
-.buy-button-small{
+.buy-button-small {
     border-radius: 24px;
     border-color: #888;
     background-color: #fff;
@@ -192,7 +204,8 @@ body .container-fluid .inside {
     margin-bottom: 5px;
     outline: none !important;
 }
-.about-author{
+
+.about-author {
     width: 250px;
     padding-top: 5px;
     padding-bottom: 4px;
@@ -205,19 +218,120 @@ body .container-fluid .inside {
 
 }
 
-.likes-comments-small{
+.likes-comments-small {
     margin-left: 15px;
 
 }
 
-.image-container{
-    margin-bottom: 40px;
-    margin-top: 7px;
+.image-container {
+    width: 280px;
+    margin: 7px auto 40px;
 }
 
-.bottom-description{
+.bottom-description {
     margin-top: 11px;
     font-style: italic;
     color: #9295a1;
     font-size: 15px;
+}
+
+/**************3*/
+.comment-image {
+    width: 40px;
+    height: 40px;
+    background-image: url("../resources/img/comments-image.svg");
+    background-size: cover;
+    float: left;
+    margin-right: 10px;
+}
+
+.comments-section {
+    margin-bottom: 50px;
+}
+
+.comment-window {
+    height: 48px;
+    width: 100%;
+}
+
+.comment-window-div{
+    padding-right: 25px;
+}
+
+.comments-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 104px;
+    margin-bottom: 50px;
+}
+
+.submit-comment {
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 24px;
+    border-color: black;
+    background-color: white;
+    color: #6c6c6c;
+    font-size: 16px;
+    font-weight: 700;
+    width: 93px;
+    outline: none;
+}
+
+.submit-div{
+    padding-right: 25px;
+}
+
+.author-name {
+    padding-top: 4px;
+    padding-right: 20px;
+}
+
+.author-name span {
+    margin-left: 20px;
+}
+
+.comment-text {
+    margin-left: 40px;
+}
+
+.votes img {
+    width: 10px;
+    margin-right: 9px;
+}
+
+.votes span {
+    color: #9295a1;
+    font-size: 15px;
+    margin-bottom: 15px;
+    margin-right: 21px;
+}
+
+.votes {
+    padding-left: 40px;
+}
+
+.replies-number {
+    color: #50515e;
+    float: left;
+    font-size: 15px;
+    margin-right: 7px;
+    padding-top: 1px;
+}
+
+.days {
+    font-size: 14px;
+    color: #9295a1;
+}
+
+.break-line {
+    height: 8px;
+}
+
+.reply-comment {
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 25px;
 }
