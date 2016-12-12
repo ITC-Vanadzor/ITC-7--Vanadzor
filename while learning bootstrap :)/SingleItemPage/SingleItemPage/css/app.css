@@ -83,6 +83,7 @@ body .container-fluid .inside {
 .likes-comments {
     color: #9295a1;
     font-size: 15px;
+    margin-bottom: 15px;
 }
 
 .likes-comments span {
@@ -115,7 +116,7 @@ body .container-fluid .inside {
 }
 
 .similar-items{
-    margin-top: 50px;
+    margin-top: 102px;
 }
 
 .similar-items-title{
@@ -194,6 +195,7 @@ body .container-fluid .inside {
 .about-author{
     width: 250px;
     padding-top: 5px;
+    padding-bottom: 4px;
     border-bottom: 1px solid #dee3f1;
     border-left: 1px solid #dee3f1;
     border-right: 1px solid #dee3f1;
@@ -210,4 +212,12 @@ body .container-fluid .inside {
 
 .image-container{
     margin-bottom: 40px;
+    margin-top: 7px;
+}
+
+.bottom-description{
+    margin-top: 11px;
+    font-style: italic;
+    color: #9295a1;
+    font-size: 15px;
 }
