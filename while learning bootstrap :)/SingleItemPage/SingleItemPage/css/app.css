@@ -29,7 +29,6 @@ body .container-fluid {
     margin-right: 15px;
     float: left;
 }
-
 .description {
     margin-top: 44px;
 }
@@ -43,6 +42,13 @@ body .container-fluid {
     font-size: 15px;
     color: rgba(113, 94, 178, 0.71);
     font-style: italic;
+
+}
+
+@media (max-width: 767px) {
+    .dr-watercolor {
+        margin-top: 20px;
+    }
 }
 
 .author {
@@ -61,7 +67,7 @@ body .container-fluid {
 }
 
 .costs p {
-    padding-right: 17px;
+    padding-right: 18px;
     margin-bottom: 40px;
     font-weight: 700;
     font-size: 22px;
@@ -69,15 +75,15 @@ body .container-fluid {
 }
 
 .costs img {
-    padding-right: 17px;
-    padding-left: 17px;
+    padding-right: 18px;
+    padding-left: 18px;
     width: 55px;
     border-right: 1px solid #c5cad8;
     border-left: 1px solid #c5cad8;
 }
 
 .costs {
-    margin-bottom: 40px;
+margin-bottom: 40px;
 }
 
 .buy-button {
@@ -87,8 +93,9 @@ body .container-fluid {
     color: #888;
     font-size: 16px;
     font-weight: 700;
-    width: 90px;
-    margin-left: 15px;
+    width: 94px;
+    height: 35px;
+    margin-left: 18px;
     outline: none !important;
 }
 
@@ -109,7 +116,7 @@ body .container-fluid {
 .soc-icon-fb {
     width: 8px;
     padding-top: 5px;
-    margin-right: 10px;
+    margin-right: 15px;
 
 }
 
@@ -121,9 +128,10 @@ body .container-fluid {
 
 .soc-icons-container p {
     font-size: 15px;
-    margin-right: 15px;
+    margin-right: 21px;
     float: left;
     padding-bottom: 5px;
+    padding-left: 0 !important;
 
 }
 
@@ -161,8 +169,8 @@ body .container-fluid {
 }
 
 .author-image-small {
-    width: 30px;
-    height: 30px;
+    width: 29px;
+    height: 29px;
     background-image: url(../resources/img/2.png);
     background-size: cover;
     margin-right: 7px;
@@ -232,7 +240,7 @@ body .container-fluid {
     margin-top: 11px;
     font-style: italic;
     color: #9295a1;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 /**************3*/
