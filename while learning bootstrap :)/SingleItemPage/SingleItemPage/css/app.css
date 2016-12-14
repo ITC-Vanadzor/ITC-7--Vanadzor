@@ -174,12 +174,10 @@ margin-bottom: 36px;
 }
 
 .author-image-small {
-    width: 24px;
-    height: 24px;
+    width: 36px;
+    height: 36px;
     background-image: url(../resources/img/2.png);
     background-size: cover;
-    margin-right: 7px;
-    float: left;
 }
 
 .price {
@@ -250,8 +248,8 @@ margin-bottom: 36px;
 
 /**************3*/
 .comment-image {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     background-image: url("../resources/img/comments-image.svg");
     background-size: cover;
     float: left;
@@ -297,18 +295,6 @@ margin-bottom: 36px;
     padding-right: 25px;
 }
 
-.author-name {
-    padding-top: 4px;
-    padding-right: 20px;
-}
-
-.author-name span {
-    margin-left: 20px;
-}
-
-.comment-text {
-    margin-left: 40px;
-}
 
 .votes img {
     width: 10px;
@@ -322,10 +308,6 @@ margin-bottom: 36px;
     margin-right: 21px;
 }
 
-.votes {
-    padding-left: 40px;
-}
-
 .replies-number {
     color: #50515e;
     float: left;
@@ -337,6 +319,7 @@ margin-bottom: 36px;
 .days {
     font-size: 14px;
     color: #9295a1;
+    margin-left: 25px;
 }
 
 .break-line {
