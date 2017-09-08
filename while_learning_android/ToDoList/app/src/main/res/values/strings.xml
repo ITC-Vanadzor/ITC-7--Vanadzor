@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">To Do List</string>
+    <string name="first_task">Add first task</string>
+    <string name="question_about_task">What is to be done?</string>
+    <string name="due_date_of_task">Due date</string>
+    <string name="title_activity_new_task">New Task</string>
+    <string name="title_activity_all_tasks">All Tasks</string>
+</resources>

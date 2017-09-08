@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hasmik_n.todolist.MainActivity">
+
+    <include
+        android:id="@+id/tb_lay"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/fragment_add_task"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/activity_margin"
+        android:layout_marginLeft="@dimen/activity_margin"
+        android:layout_marginTop="@dimen/activity_margin_top"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/question_about_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question_about_task"/>
+
+        <LinearLayout
+            android:id="@+id/task_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <EditText
+                android:id="@+id/task_description_input"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:layout_weight="0.8"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/add_voice_task_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/microphone"
+                android:layout_marginBottom="@dimen/buttons_margin"
+                android:layout_weight="0.2"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/due_date_of_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/due_date_of_task"/>
+
+        <LinearLayout
+            android:id="@+id/task_due_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <EditText
+                android:id="@+id/task_due_date_input"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:layout_weight="0.8"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/calendar"
+                android:layout_marginBottom="@dimen/buttons_margin"
+                android:layout_weight="0.2"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
