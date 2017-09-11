@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.hasmik_n.todolist.activities.MainActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/all_tasks_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="vertical">
-    </android.support.v7.widget.RecyclerView>
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/all_tasks_list"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:scrollbars="vertical">-->
+    <!--</android.support.v7.widget.RecyclerView>-->
 </android.support.design.widget.CoordinatorLayout>

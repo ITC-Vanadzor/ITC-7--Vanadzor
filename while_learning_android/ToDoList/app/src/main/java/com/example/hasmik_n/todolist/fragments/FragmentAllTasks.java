@@ -31,14 +31,4 @@ public class FragmentAllTasks extends Fragment {
         return rv;
     }
 
-    /**
-     * A Simple ViewHolder for the RecyclerView
-     */
-    public static class SimpleViewHolder extends RecyclerView.ViewHolder{
-        public TextView textView;
-        public SimpleViewHolder(View itemView) {
-            super(itemView);
-            textView = (TextView) itemView;
-        }
-    }
 }

@@ -1,35 +1,28 @@
 package com.example.hasmik_n.todolist.handlers;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.hasmik_n.todolist.R;
-import com.example.hasmik_n.todolist.fragments.FragmentAllTasks;
-
-import java.util.Collections;
-import java.util.List;
 /**
  * A Simple Adapter for the RecyclerView
  */
-public class MyRecyclerViewAdapter extends RecyclerView.Adapter<FragmentAllTasks.SimpleViewHolder> {
+public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.SimpleViewHolder> {
     private String[] dataSource;
     public MyRecyclerViewAdapter(String[] dataArgs){
         dataSource = dataArgs;
     }
 
     @Override
-    public FragmentAllTasks.SimpleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public SimpleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = new TextView(parent.getContext());
-        FragmentAllTasks.SimpleViewHolder viewHolder = new FragmentAllTasks.SimpleViewHolder(view);
+        SimpleViewHolder viewHolder = new SimpleViewHolder(view);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(FragmentAllTasks.SimpleViewHolder holder, int position) {
+    public void onBindViewHolder(SimpleViewHolder holder, int position) {
         holder.textView.setText(dataSource[position]);
     }
 
@@ -37,4 +30,16 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<FragmentAllTasks
     public int getItemCount() {
         return dataSource.length;
     }
+
+    /**
+     * A Simple ViewHolder for the RecyclerView
+     */
+    public static class SimpleViewHolder extends RecyclerView.ViewHolder{
+        public TextView textView;
+        public SimpleViewHolder(View itemView) {
+            super(itemView);
+            textView = (TextView) itemView;
+        }
+    }
 }
+
