@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.hasmik_n.todolist.MainActivity">
+    tools:context="com.example.hasmik_n.todolist.activities.MainActivity">
 
     <include
         android:id="@+id/tb_lay"
         layout="@layout/toolbar" />
 
     <LinearLayout
-        android:id="@+id/fragment_add_task"
+        android:id="@+id/fragment_to_add_task"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginRight="@dimen/activity_margin"
@@ -78,4 +78,4 @@
                 android:layout_weight="0.2"/>
         </LinearLayout>
     </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+</android.support.design.widget.CoordinatorLayout>

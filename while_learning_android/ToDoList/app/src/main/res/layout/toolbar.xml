@@ -13,7 +13,7 @@ app:theme="@style/AppTheme.AppBarOverlay">
     android:layout_width="match_parent"
     android:layout_height="@dimen/action_bar_size"
     app:title="@string/title_activity_new_task"
-    app:titleTextColor="@color/titleColor"
+    app:titleTextColor="@color/white"
 
     >
     <Button
@@ -25,7 +25,7 @@ app:theme="@style/AppTheme.AppBarOverlay">
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginRight="@dimen/activity_margin"
-        />
+        android:onClick="submitTask"/>
 
 </android.support.v7.widget.Toolbar>
 </android.support.design.widget.AppBarLayout>
