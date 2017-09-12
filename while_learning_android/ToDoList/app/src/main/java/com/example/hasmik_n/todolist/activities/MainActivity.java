@@ -5,10 +5,11 @@ import android.app.FragmentTransaction;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.widget.Toolbar;
 import android.view.View;
+
 import com.example.hasmik_n.todolist.fragments.FragmentLandingPage;
 import com.example.hasmik_n.todolist.fragments.FragmentAddTask;
-import com.example.hasmik_n.todolist.fragments.FragmentAllTasks;
 
 import com.example.hasmik_n.todolist.R;
 
