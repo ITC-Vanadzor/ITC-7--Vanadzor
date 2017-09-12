@@ -13,9 +13,7 @@ app:theme="@style/AppTheme.AppBarOverlay">
     android:layout_width="match_parent"
     android:layout_height="@dimen/action_bar_size"
     app:title="@string/title_activity_new_task"
-    app:titleTextColor="@color/white"
-
-    >
+    app:titleTextColor="@color/white">
     <Button
         android:id="@+id/submit_task"
         android:layout_height="@dimen/task_submitting_button_size"

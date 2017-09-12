@@ -5,11 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.hasmik_n.todolist.activities.MainActivity">
-
-    <!--<android.support.v7.widget.RecyclerView-->
-        <!--android:id="@+id/all_tasks_list"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:scrollbars="vertical">-->
-    <!--</android.support.v7.widget.RecyclerView>-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/my_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/activity_margin"
+            android:layout_weight="1"
+            android:scrollbars="vertical" />
+    </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>
