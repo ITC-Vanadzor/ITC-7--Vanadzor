@@ -8,9 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import com.example.hasmik_n.todolist.fragments.FragmentLandingPage;
 import com.example.hasmik_n.todolist.fragments.FragmentAddTask;
+import com.example.hasmik_n.todolist.fragments.FragmentAllTasks;
+
 import com.example.hasmik_n.todolist.R;
 
-public class MainActivity extends FragmentActivity  {
+public class MainActivity extends FragmentActivity implements FragmentAddTask.OnHeadlineSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +29,7 @@ public class MainActivity extends FragmentActivity  {
     protected void onResume() {
         super.onResume();
         FloatingActionButton fab = findViewById(R.id.add_task);
-        fab.setOnClickListener(new View.OnClickListener()
-        {
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Fragment fragmentToAddTask = new FragmentAddTask();
@@ -38,5 +39,38 @@ public class MainActivity extends FragmentActivity  {
                 transaction.commit();
             }
         });
+    }
+
+    public void onTaskSubmitted(String desc, String deadline) {
+        // The user selected the headline of an article from the HeadlinesFragment
+        // Do something here to display that article
+
+
+//        Fragment allTasksFrag = (Fragment)
+//                getSupportFragmentManager().findFragmentById(R.id.all_tasks_fragment);
+
+//        if (allTasksFrag != null) {
+//            // If article frag is available, we're in two-pane layout...
+//
+//            // Call a method in the ArticleFragment to update its content
+//            allTasksFrag.updateArticleView(position);
+//        } else {
+//            // Otherwise, we're in the one-pane layout and must swap frags...
+//
+//            // Create fragment and give it an argument for the selected article
+//            FragmentAllTasks newFragment = new FragmentAllTasks();
+//            Bundle args = new Bundle();
+//            args.putInt(FragmentAllTasks.ARG_POSITION, position);
+//            newFragment.setArguments(args);
+//
+//            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//
+//            // Replace whatever is in the fragment_container view with this fragment,
+//            // and add the transaction to the back stack so the user can navigate back
+//            transaction.replace(R.id.fragment_container, newFragment);
+//            transaction.addToBackStack(null);
+//
+//            // Commit the transaction
+//            transaction.commit();
     }
 }

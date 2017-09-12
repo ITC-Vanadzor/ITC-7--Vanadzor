@@ -60,7 +60,6 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         public TextView tvDescription;
         public TextView tvDueDate;
         public CheckBox chkSelected;
-
         public ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
 

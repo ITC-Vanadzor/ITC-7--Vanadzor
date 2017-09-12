@@ -36,6 +36,8 @@ public class FragmentAllTasks extends Fragment {
             Task st = new Task("Task Description - " + i, "Task Due Date - " + i, false);
             taskList.add(st);
         }
+
+
         RecyclerView reclist = (RecyclerView) getView().findViewById(R.id.my_recycler_view);
         reclist.setHasFixedSize(true);
         reclist.setLayoutManager(new LinearLayoutManager(getContext()));
