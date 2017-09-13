@@ -13,7 +13,7 @@ import com.example.hasmik_n.todolist.handlers.MyRecyclerViewAdapter;
 import com.example.hasmik_n.todolist.handlers.Task;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 /**
  * Created by hasmik_n on 9/8/17.
@@ -21,23 +21,18 @@ import java.util.List;
 
 public class FragmentAllTasks extends Fragment {
 
-    private List<Task> taskList;
+    private ArrayList<Task> taskList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        taskList = getArguments().getParcelableArrayList("tasksList");
+        ;
         return inflater.inflate(R.layout.fragment_all_tasks, container, false);
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        taskList = new ArrayList<>();
-        for (int i = 1; i <= 20; i++) {
-            Task st = new Task("Task Description - " + i, "Task Due Date - " + i, false);
-            taskList.add(st);
-        }
-
-
         RecyclerView reclist = (RecyclerView) getView().findViewById(R.id.my_recycler_view);
         reclist.setHasFixedSize(true);
         reclist.setLayoutManager(new LinearLayoutManager(getContext()));

@@ -5,20 +5,27 @@ import android.app.FragmentTransaction;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-import android.widget.Toolbar;
 import android.view.View;
 
+import com.example.hasmik_n.todolist.fragments.FragmentAllTasks;
 import com.example.hasmik_n.todolist.fragments.FragmentLandingPage;
 import com.example.hasmik_n.todolist.fragments.FragmentAddTask;
 
 import com.example.hasmik_n.todolist.R;
+import com.example.hasmik_n.todolist.handlers.Task;
+
+import java.util.ArrayList;
 
 public class MainActivity extends FragmentActivity implements FragmentAddTask.OnHeadlineSelectedListener {
+
+    //TODO Use TasksManager
+    private ArrayList<Task> tasksList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        tasksList = new ArrayList<>();
         Fragment fragmentOfLandingPage = new FragmentLandingPage();
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment_container, fragmentOfLandingPage);
@@ -43,35 +50,15 @@ public class MainActivity extends FragmentActivity implements FragmentAddTask.On
     }
 
     public void onTaskSubmitted(String desc, String deadline) {
-        // The user selected the headline of an article from the HeadlinesFragment
-        // Do something here to display that article
-
-
-//        Fragment allTasksFrag = (Fragment)
-//                getSupportFragmentManager().findFragmentById(R.id.all_tasks_fragment);
-
-//        if (allTasksFrag != null) {
-//            // If article frag is available, we're in two-pane layout...
-//
-//            // Call a method in the ArticleFragment to update its content
-//            allTasksFrag.updateArticleView(position);
-//        } else {
-//            // Otherwise, we're in the one-pane layout and must swap frags...
-//
-//            // Create fragment and give it an argument for the selected article
-//            FragmentAllTasks newFragment = new FragmentAllTasks();
-//            Bundle args = new Bundle();
-//            args.putInt(FragmentAllTasks.ARG_POSITION, position);
-//            newFragment.setArguments(args);
-//
-//            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//
-//            // Replace whatever is in the fragment_container view with this fragment,
-//            // and add the transaction to the back stack so the user can navigate back
-//            transaction.replace(R.id.fragment_container, newFragment);
-//            transaction.addToBackStack(null);
-//
-//            // Commit the transaction
-//            transaction.commit();
+        Task task = new Task(desc,deadline,false);
+        tasksList.add(task);
+        Fragment fragmentOfAllTasks = new FragmentAllTasks();
+        Bundle args = new Bundle();
+        args.putParcelableArrayList ("tasksList", tasksList );
+        fragmentOfAllTasks.setArguments(args);
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, fragmentOfAllTasks);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 }

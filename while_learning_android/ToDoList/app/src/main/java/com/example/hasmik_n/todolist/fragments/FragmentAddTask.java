@@ -2,7 +2,6 @@ package com.example.hasmik_n.todolist.fragments;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,11 +16,11 @@ import com.example.hasmik_n.todolist.R;
 
 public class FragmentAddTask extends Fragment {
 
-    OnHeadlineSelectedListener mCallback;
+    OnTaskCreatedListener mCallback;
 
     // Container Activity must implement this interface
-    public interface OnHeadlineSelectedListener {
-        public void onTaskSubmitted(String description, String duedate);
+    public interface OnTaskCreatedListener {
+        public void onTaskSubmitted(String description, String dueDate);
     }
 
     @Override
@@ -31,7 +30,7 @@ public class FragmentAddTask extends Fragment {
         // This makes sure that the container activity has implemented
         // the callback interface. If not, it throws an exception
         try {
-            mCallback = (OnHeadlineSelectedListener) activity;
+            mCallback = (OnTaskCreatedListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
                     + " must implement OnHeadlineSelectedListener");
@@ -53,15 +52,8 @@ public class FragmentAddTask extends Fragment {
         {
             @Override
             public void onClick(View view) {
-
                 // Send the event to the host activity
                 mCallback.onTaskSubmitted("text","text");
-
-                Fragment fragmentOfAllTasks = new FragmentAllTasks();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, fragmentOfAllTasks);
-                transaction.addToBackStack(null);
-                transaction.commit();
             }
         });
     }
