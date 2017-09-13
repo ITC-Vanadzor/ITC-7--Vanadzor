@@ -3,8 +3,10 @@ package com.example.hasmik_n.todolist.activities;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.View;
 
 import com.example.hasmik_n.todolist.fragments.FragmentAllTasks;
@@ -16,7 +18,7 @@ import com.example.hasmik_n.todolist.handlers.Task;
 
 import java.util.ArrayList;
 
-public class MainActivity extends FragmentActivity implements FragmentAddTask.OnHeadlineSelectedListener {
+public class MainActivity extends AppCompatActivity implements FragmentAddTask.OnTaskCreatedListener {
 
     //TODO Use TasksManager
     private ArrayList<Task> tasksList;
@@ -25,6 +27,9 @@ public class MainActivity extends FragmentActivity implements FragmentAddTask.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar customToolbar = (Toolbar) findViewById(R.id.main_toolbar);
+        setSupportActionBar(customToolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         tasksList = new ArrayList<>();
         Fragment fragmentOfLandingPage = new FragmentLandingPage();
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
@@ -47,6 +52,12 @@ public class MainActivity extends FragmentActivity implements FragmentAddTask.On
                 transaction.commit();
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.toolbar_menu, menu);
+        return true;
     }
 
     public void onTaskSubmitted(String desc, String deadline) {

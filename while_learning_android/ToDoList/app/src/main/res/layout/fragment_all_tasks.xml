@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/all_tasks_fragment"
     tools:context="com.example.hasmik_n.todolist.activities.MainActivity">
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
