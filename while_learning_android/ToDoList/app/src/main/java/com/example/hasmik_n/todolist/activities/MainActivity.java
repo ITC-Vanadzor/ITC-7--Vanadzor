@@ -42,16 +42,18 @@ public class MainActivity extends AppCompatActivity implements FragmentAddTask.O
     protected void onResume() {
         super.onResume();
         FloatingActionButton fab = findViewById(R.id.add_task);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Fragment fragmentToAddTask = new FragmentAddTask();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, fragmentToAddTask);
-                transaction.addToBackStack(null);  // if written, this transaction will be added to backstack
-                transaction.commit();
-            }
-        });
+        if (fab!=null) {
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Fragment fragmentToAddTask = new FragmentAddTask();
+                    FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                    transaction.replace(R.id.fragment_container, fragmentToAddTask);
+                    transaction.addToBackStack(null);  // if written, this transaction will be added to backstack
+                    transaction.commit();
+                }
+            });
+        }
     }
 
     @Override

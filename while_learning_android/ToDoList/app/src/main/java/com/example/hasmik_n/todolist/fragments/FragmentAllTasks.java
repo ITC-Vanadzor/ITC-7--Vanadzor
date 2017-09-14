@@ -40,9 +40,6 @@ public class FragmentAllTasks extends Fragment {
         RecyclerView.Adapter mAdapter = new MyRecyclerViewAdapter(tasks);
         tasksList.setAdapter(mAdapter);
 
-
-
-
         FloatingActionButton fab = getView().findViewById(R.id.add_task);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
