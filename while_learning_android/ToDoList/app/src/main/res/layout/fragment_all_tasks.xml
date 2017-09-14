@@ -7,7 +7,7 @@
     android:id="@+id/all_tasks_fragment"
     tools:context="com.example.hasmik_n.todolist.activities.MainActivity">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -19,5 +19,18 @@
             android:layout_margin="@dimen/activity_margin"
             android:layout_weight="1"
             android:scrollbars="vertical" />
-    </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/plus_sign"
+            android:layout_marginBottom="@dimen/buttons_margin"
+            android:layout_weight="0.2"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/activity_margin"
+
+            />
+    </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>

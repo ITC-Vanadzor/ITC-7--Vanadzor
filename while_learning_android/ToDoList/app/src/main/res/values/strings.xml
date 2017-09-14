@@ -8,8 +8,7 @@
 
     <string-array name="tasks_types">
         <item>All  Lists</item>
-        <item>Default</item>
-        <item>Personal</item>
+        <item>Finished</item>
     </string-array>
 
 </resources>

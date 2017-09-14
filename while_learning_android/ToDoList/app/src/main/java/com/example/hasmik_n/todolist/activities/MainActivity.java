@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements FragmentAddTask.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar customToolbar = (Toolbar) findViewById(R.id.main_toolbar);
+        Toolbar customToolbar = findViewById(R.id.main_toolbar);
         setSupportActionBar(customToolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         tasksList = new ArrayList<>();
@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements FragmentAddTask.O
     }
 
     public void onTaskSubmitted(String desc, String deadline) {
+        getSupportActionBar().show();
         Task task = new Task(desc,deadline,false);
         tasksList.add(task);
         Fragment fragmentOfAllTasks = new FragmentAllTasks();

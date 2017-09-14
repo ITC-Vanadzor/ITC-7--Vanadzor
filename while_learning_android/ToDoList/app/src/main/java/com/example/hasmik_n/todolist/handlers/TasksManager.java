@@ -3,6 +3,10 @@ package com.example.hasmik_n.todolist.handlers;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * This class is not used
+ */
 public class TasksManager {
     private List<Task> tasksList;
 

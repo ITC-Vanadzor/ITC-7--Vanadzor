@@ -7,7 +7,11 @@
     android:layout_height="match_parent"
     tools:context="com.example.hasmik_n.todolist.activities.MainActivity"
    >
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
     <include
         layout="@layout/toolbar_main"
         android:layout_width="match_parent"
@@ -16,7 +20,7 @@
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/bgcolor"
-        android:layout_marginTop="@dimen/action_bar_size">
+        android:background="@color/bgcolor">
     </FrameLayout>
+</LinearLayout>
 </android.support.design.widget.CoordinatorLayout>
