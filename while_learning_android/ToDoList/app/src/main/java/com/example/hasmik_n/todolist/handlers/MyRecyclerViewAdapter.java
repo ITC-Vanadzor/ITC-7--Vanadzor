@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.hasmik_n.todolist.R;
 
@@ -27,25 +26,20 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, int position) {
+    public void onBindViewHolder(final ViewHolder viewHolder, final int position) {
         final int pos = position;
-        Task task = taskList.get(position);
+        final Task task = taskList.get(position);
         viewHolder.tvDescription.setText(task.getDescription());
         viewHolder.tvDueDate.setText(task.getDueDate());
         viewHolder.chkSelected.setChecked(task.isSelected());
         viewHolder.chkSelected.setTag(taskList.get(position));
         viewHolder.chkSelected.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                CheckBox cb = (CheckBox) v;
-                Task task = (Task) cb.getTag();
+//                TODO
 
-                task.setSelected(cb.isChecked());
-                taskList.get(pos).setSelected(cb.isChecked());
-
-                Toast.makeText(
-                        v.getContext(),
-                        "Selected Task: " + cb.getText() + " is "
-                                + cb.isChecked(), Toast.LENGTH_LONG).show();
+                taskList.remove(viewHolder.getAdapterPosition());
+                notifyItemRemoved(position);
+                notifyItemRangeChanged(viewHolder.getAdapterPosition(),taskList.size());
             }
         });
     }
@@ -54,9 +48,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     public int getItemCount() {
         return taskList.size();
     }
-
     public static class ViewHolder extends RecyclerView.ViewHolder {
-
         public TextView tvDescription;
         public TextView tvDueDate;
         public CheckBox chkSelected;

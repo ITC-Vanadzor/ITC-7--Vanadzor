@@ -9,6 +9,7 @@ import java.util.List;
  */
 public class TasksManager {
     private List<Task> tasksList;
+    private List<Task> finishedTasksList;
 
     public TasksManager() {
         tasksList = new ArrayList<>();
@@ -28,3 +29,4 @@ public class TasksManager {
 
 
 }
+
