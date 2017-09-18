@@ -1,0 +1,126 @@
+body, .container-fluid {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.inside {
+    max-width: 1200px;
+    margin: auto;
+    min-width: 320px;
+    padding-right: 0 !important;
+}
+
+.myButton {
+    border-radius: 20px;
+    background-color: #837eac;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border-color: #837eac;
+}
+
+.request {
+    float: right;
+    width: 170px;
+}
+
+.message {
+    float: left;
+    width: 170px;
+}
+
+.btn-container {
+    padding: 35px 0;
+}
+
+.msg {
+    width: 40px;
+    float: left;
+    margin-left: 15px;
+}
+
+.req {
+    float: right;
+    width: 40px;
+}
+
+.follow {
+    border-radius: 20px;
+    background-color: #3ce60f;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border-color: #3ce60f;
+    height: 35px;
+    max-width: 130px;
+}
+
+#profileImage {
+    background-image: url(../resources/img/2.png);
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    margin: auto auto 15px;
+}
+
+#account {
+    color: #bbb3f7;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.following span {
+    font-size: 14px;
+    color: white;
+    padding-right: 15px;
+}
+
+.following {
+    float: right;
+}
+
+.following > div {
+    float: left;
+}
+
+.button-container {
+    padding: 25px 0;
+}
+
+.header {
+    background-image: url(../resources/img/profile-background.jpg);
+    background-size: cover;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+#followers {
+    border: 1px #dedede;
+    border-right-style: solid;
+    height: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 6px;
+}
+
+.soc-icon {
+    width: 20px;
+}
+
+.soc-icon-fb {
+    width: 9px;
+}
+
+.soc-icons-container > img {
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.description > p {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+}

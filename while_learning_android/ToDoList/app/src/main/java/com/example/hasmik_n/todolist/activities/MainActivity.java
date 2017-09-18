@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements FragmentAddTask.O
 
     //TODO Use TasksManager
     private ArrayList<Task> tasksList;
-    private ArrayList<Task> finishedTasksList;
+    public static ArrayList<Task> finishedTasksList;
     private Spinner spinner;
 
     @Override
@@ -44,10 +44,7 @@ public class MainActivity extends AppCompatActivity implements FragmentAddTask.O
         transaction.replace(R.id.fragment_container, fragmentOfLandingPage);
         transaction.addToBackStack(null);
         transaction.commit();
-
-
         addListenerOnSpinnerItemSelection();
-
     }
 
     @Override
