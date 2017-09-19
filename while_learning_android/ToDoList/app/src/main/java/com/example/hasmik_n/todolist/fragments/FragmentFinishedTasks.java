@@ -9,12 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.hasmik_n.todolist.R;
-import com.example.hasmik_n.todolist.handlers.AllTasksRecyclerViewAdapter;
 import com.example.hasmik_n.todolist.handlers.Task;
+import com.example.hasmik_n.todolist.handlers.TasksRecyclerViewAdapter;
 
 import java.util.ArrayList;
-
-import static com.example.hasmik_n.todolist.activities.MainActivity.finishedTasksList;
 
 
 /**
@@ -28,16 +26,16 @@ public class FragmentFinishedTasks extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         tasks = getArguments().getParcelableArrayList("finishedTasksList");
-        return inflater.inflate(R.layout.fragment_all_tasks, container, false);
+        return inflater.inflate(R.layout.fragment_finished_tasks, container, false);
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        RecyclerView tasksList = getView().findViewById(R.id.my_recycler_view);
+        RecyclerView tasksList = getView().findViewById(R.id.finished_tasks_recycler_view);
         tasksList.setHasFixedSize(true);
         tasksList.setLayoutManager(new LinearLayoutManager(getContext()));
-        RecyclerView.Adapter mAdapter = new AllTasksRecyclerViewAdapter(finishedTasksList);
+        RecyclerView.Adapter mAdapter = new TasksRecyclerViewAdapter(tasks);
         tasksList.setAdapter(mAdapter);
     }
 }

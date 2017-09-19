@@ -5,21 +5,30 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import com.example.hasmik_n.todolist.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder> {
-    private List<Task> taskList;
+import static com.example.hasmik_n.todolist.activities.MainActivity.tasksHolder;
 
-    public MyRecyclerViewAdapter(List<Task> tasks) {
+public class TasksRecyclerViewAdapter extends RecyclerView.Adapter<TasksRecyclerViewAdapter.ViewHolder> implements Filterable {
+    private List<Task> taskList;
+    private List<Task> mArrayList;
+    private List<Task> mFilteredList;
+
+
+
+    public TasksRecyclerViewAdapter(List<Task> tasks) {
         this.taskList = tasks;
     }
 
     @Override
-    public MyRecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public TasksRecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemLayoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_row, null);
         ViewHolder viewHolder = new ViewHolder(itemLayoutView);
         return viewHolder;
@@ -36,7 +45,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         viewHolder.chkSelected.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 //                TODO
-
+                tasksHolder.addToFinishedTasksList(task);
                 taskList.remove(viewHolder.getAdapterPosition());
                 notifyItemRemoved(position);
                 notifyItemRangeChanged(viewHolder.getAdapterPosition(),taskList.size());
@@ -48,6 +57,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     public int getItemCount() {
         return taskList.size();
     }
+
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView tvDescription;
         public TextView tvDueDate;
@@ -59,5 +69,35 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
             tvDueDate = (TextView) itemLayoutView.findViewById(R.id.task_deadline);
             chkSelected = (CheckBox) itemLayoutView.findViewById(R.id.checkBox);
         }
+    }
+
+    @Override
+    public Filter getFilter() {
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence charSequence) {
+                String charString = charSequence.toString();
+                if (charString.isEmpty()) {
+                    mFilteredList = taskList;
+                } else {
+                    ArrayList<Task> filteredList = new ArrayList<>();
+                    for (Task task : taskList) {
+                        if (task.getDescription().toLowerCase().contains(charString)) {
+                            filteredList.add(task);
+                        }
+                    }
+                    mFilteredList = filteredList;
+                }
+                FilterResults filterResults = new FilterResults();
+                filterResults.values = mFilteredList;
+                return filterResults;
+            }
+
+            @Override
+            protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+                mFilteredList = (ArrayList<Task>) filterResults.values;
+                notifyDataSetChanged();
+            }
+        };
     }
 }

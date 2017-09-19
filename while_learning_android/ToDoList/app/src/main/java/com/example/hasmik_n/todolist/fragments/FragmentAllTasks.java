@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.hasmik_n.todolist.R;
-import com.example.hasmik_n.todolist.handlers.AllTasksRecyclerViewAdapter;
+import com.example.hasmik_n.todolist.handlers.TasksRecyclerViewAdapter;
 import com.example.hasmik_n.todolist.handlers.Task;
 
 import java.util.ArrayList;
@@ -37,7 +37,7 @@ public class FragmentAllTasks extends Fragment {
         RecyclerView tasksList = getView().findViewById(R.id.my_recycler_view);
         tasksList.setHasFixedSize(true);
         tasksList.setLayoutManager(new LinearLayoutManager(getContext()));
-        RecyclerView.Adapter mAdapter = new AllTasksRecyclerViewAdapter(tasks);
+        RecyclerView.Adapter mAdapter = new TasksRecyclerViewAdapter(tasks);
         tasksList.setAdapter(mAdapter);
 
         FloatingActionButton fab = getView().findViewById(R.id.add_task);
