@@ -4,9 +4,14 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -24,9 +29,11 @@ import java.util.ArrayList;
 public class FragmentAllTasks extends Fragment {
 
     private ArrayList<Task> tasks;
+    TasksRecyclerViewAdapter mAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        setHasOptionsMenu(true);
         tasks = getArguments().getParcelableArrayList("tasksList");
         return inflater.inflate(R.layout.fragment_all_tasks, container, false);
     }
@@ -37,9 +44,8 @@ public class FragmentAllTasks extends Fragment {
         RecyclerView tasksList = getView().findViewById(R.id.my_recycler_view);
         tasksList.setHasFixedSize(true);
         tasksList.setLayoutManager(new LinearLayoutManager(getContext()));
-        RecyclerView.Adapter mAdapter = new TasksRecyclerViewAdapter(tasks);
+        mAdapter = new TasksRecyclerViewAdapter(tasks);
         tasksList.setAdapter(mAdapter);
-
         FloatingActionButton fab = getView().findViewById(R.id.add_task);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,4 +59,28 @@ public class FragmentAllTasks extends Fragment {
         });
 
     }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        MenuItem search = menu.findItem(R.id.search);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(search);
+        search(searchView);
+        super.onCreateOptionsMenu(menu,inflater);
+    }
+
+    private void search(SearchView searchView) {
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                mAdapter.getFilter().filter(newText);
+                return true;
+            }
+        });
+    }
+
 }

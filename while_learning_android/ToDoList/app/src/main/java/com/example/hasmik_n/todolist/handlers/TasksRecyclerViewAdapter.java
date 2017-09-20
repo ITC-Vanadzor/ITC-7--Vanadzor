@@ -18,13 +18,11 @@ import static com.example.hasmik_n.todolist.activities.MainActivity.tasksHolder;
 
 public class TasksRecyclerViewAdapter extends RecyclerView.Adapter<TasksRecyclerViewAdapter.ViewHolder> implements Filterable {
     private List<Task> taskList;
-    private List<Task> mArrayList;
-    private List<Task> mFilteredList;
-
-
+    private List<Task> filteredList;
 
     public TasksRecyclerViewAdapter(List<Task> tasks) {
         this.taskList = tasks;
+        this.filteredList = tasks;
     }
 
     @Override
@@ -37,25 +35,25 @@ public class TasksRecyclerViewAdapter extends RecyclerView.Adapter<TasksRecycler
     @Override
     public void onBindViewHolder(final ViewHolder viewHolder, final int position) {
         final int pos = position;
-        final Task task = taskList.get(position);
+        final Task task = filteredList.get(position);
         viewHolder.tvDescription.setText(task.getDescription());
         viewHolder.tvDueDate.setText(task.getDueDate());
         viewHolder.chkSelected.setChecked(task.isSelected());
-        viewHolder.chkSelected.setTag(taskList.get(position));
+        viewHolder.chkSelected.setTag(filteredList.get(position));
         viewHolder.chkSelected.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-//                TODO
+//                TODO DB should be used and the code base will be changed
                 tasksHolder.addToFinishedTasksList(task);
-                taskList.remove(viewHolder.getAdapterPosition());
+                filteredList.remove(viewHolder.getAdapterPosition());
                 notifyItemRemoved(position);
-                notifyItemRangeChanged(viewHolder.getAdapterPosition(),taskList.size());
+                notifyItemRangeChanged(viewHolder.getAdapterPosition(), filteredList.size());
             }
         });
     }
 
     @Override
     public int getItemCount() {
-        return taskList.size();
+        return filteredList.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -78,7 +76,7 @@ public class TasksRecyclerViewAdapter extends RecyclerView.Adapter<TasksRecycler
             protected FilterResults performFiltering(CharSequence charSequence) {
                 String charString = charSequence.toString();
                 if (charString.isEmpty()) {
-                    mFilteredList = taskList;
+                    filteredList = taskList;
                 } else {
                     ArrayList<Task> filteredList = new ArrayList<>();
                     for (Task task : taskList) {
@@ -86,16 +84,16 @@ public class TasksRecyclerViewAdapter extends RecyclerView.Adapter<TasksRecycler
                             filteredList.add(task);
                         }
                     }
-                    mFilteredList = filteredList;
+                    TasksRecyclerViewAdapter.this.filteredList = filteredList;
                 }
                 FilterResults filterResults = new FilterResults();
-                filterResults.values = mFilteredList;
+                filterResults.values = filteredList;
                 return filterResults;
             }
 
             @Override
             protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
-                mFilteredList = (ArrayList<Task>) filterResults.values;
+                filteredList = (ArrayList<Task>) filterResults.values;
                 notifyDataSetChanged();
             }
         };
