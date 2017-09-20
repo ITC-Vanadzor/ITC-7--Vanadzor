@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements FragmentAddTask.O
         getMenuInflater().inflate(R.menu.toolbar_menu, menu);
         return true;
     }
-    
+
     public void onTaskSubmitted(String desc, String deadline) {
         isTaskCreated = true;
         getSupportActionBar().show();

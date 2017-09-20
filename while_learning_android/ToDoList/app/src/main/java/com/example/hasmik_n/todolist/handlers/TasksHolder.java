@@ -6,16 +6,9 @@ public class TasksHolder {
     private ArrayList<Task> tasksList = new ArrayList<>();
     private ArrayList<Task> finishedTasksList = new ArrayList<>();
     public TasksHolder() {
-        for (int i = 1; i <= 1; i++) {
-            Task st = new Task("Task Description - " + i, "Task Due Date - " + i, false);
-            finishedTasksList.add(st);
-            tasksList.add(st);
-        }
+        // TODO Should get data from DB
     }
 
-    public void addTaskToList(Task task){
-        this.tasksList.add(task);
-    }
     public ArrayList<Task> getTasksList(){
         return this.tasksList;
     }
